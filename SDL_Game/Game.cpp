@@ -108,6 +108,15 @@ void Game::Run()
             //Close();
             return;
         }
+        
+        if (bricks.empty())
+        {
+            std::cout << "I can't believe you won! D:" << std::endl;
+            ShowStartScreen();
+            return;
+        }
+        
+        SDL_Delay(1000/60);
     }
 }
 
