@@ -10,9 +10,10 @@ int main(int argc, char* args[])
 {
     Game* game = new Game();
     
+    
     if (game->Init())
     {
-        game->Run();
+        game->ShowStartScreen();
     }
     
     return 0;

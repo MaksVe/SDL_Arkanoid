@@ -36,6 +36,8 @@ public:
     
     bool Lost;
     
+    void ShowStartScreen();
+    
 private:
     SDL_Window* window;
     SDL_Renderer* renderer;
@@ -54,6 +56,16 @@ private:
     
     std::vector<Brick*> bricks;
     std::vector<Brick*>::iterator it;
+    
+    SDL_Color textColor;
+    SDL_Surface* startTextSurface;
+    SDL_Surface* quitTextSurface;
+    
+    SDL_Texture* startTexture;
+    SDL_Texture* quitTexture;
+    
+    SDL_Rect startTextureRect;
+    SDL_Rect quitTextureRect;
 };
 
 #endif /* Game_hpp */
