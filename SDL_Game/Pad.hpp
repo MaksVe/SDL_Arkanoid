@@ -33,7 +33,7 @@ private:
     
     const static int PAD_WIDTH = 100;
     const static int PAD_HEIGHT = 10;
-    const static int PAD_VELOCITY = 2;
+    const static int PAD_VELOCITY = 10;
 };
 
 #endif /* Pad_hpp */

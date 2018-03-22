@@ -16,8 +16,8 @@ Ball::Ball(SDL_Renderer* r, int screenWidth, int screenHeight)
     rect.w = BALL_WIDTH;
     rect.h = BALL_HEIGHT;
     
-    velocityX = 1;
-    velocityY = 1;
+    velocityX = 6;
+    velocityY = 6;
 }
 
 Ball::~Ball()
@@ -33,17 +33,17 @@ void Ball::Update(SDL_Event *e)
     // top
     if (rect.y <= 0)
     {
-        velocityY -= velocity;
+        velocityY = -velocityY;
     }
     // left
     if (rect.x <= 0)
     {
-        velocityX -= velocity;
+        velocityX = -velocityX;
     }
     // right
     if (rect.x >= 400 - (BALL_WIDTH / 2))
     {
-        velocityX += velocity;
+        velocityX = -velocityX;
     }
     // bottom: reset the ball
     if (rect.y >= 600 - (BALL_HEIGHT / 2))

@@ -35,7 +35,7 @@ private:
     
     const static int BALL_WIDTH = 5;
     const static int BALL_HEIGHT = 5;
-    int velocity = 1;
+    //int velocity = 15;
     
     int velocityX;
     int velocityY;

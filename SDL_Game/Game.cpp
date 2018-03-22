@@ -40,7 +40,7 @@ bool Game::Init()
         else
         {
             // Create renderer
-            renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+            renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
             if (renderer == nullptr)
             {
                 std::cout << "Unable to create renderer: " << SDL_GetError() << std::endl;
@@ -166,6 +166,7 @@ void Game::Close()
     renderer = nullptr;
     SDL_DestroyWindow(window);
     window = nullptr;
+    TTF_Quit();
     SDL_Quit();
 }
 
@@ -239,7 +240,7 @@ void Game::ShowStartScreen()
             {
                 if (SDL_PollEvent(&e))
                 {
-                    if (e.type == SDL_KEYDOWN && e.key.keysym.sym == SDLK_q)
+                    if ((e.type == SDL_KEYDOWN && e.key.keysym.sym == SDLK_q) || e.type == SDL_QUIT)
                     {
                         Close();
                         break;
