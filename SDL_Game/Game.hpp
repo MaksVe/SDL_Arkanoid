@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 #include <iostream>
-#include <vector>
+#include <list>
 #include "SDL2/SDL.h"
 #include <SDL2_ttf/SDL_ttf.h>
 
