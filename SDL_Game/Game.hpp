@@ -54,8 +54,8 @@ private:
     
     int missCounter = 0;
     
-    std::vector<Brick*> bricks;
-    std::vector<Brick*>::iterator it;
+    std::list<Brick*> bricks;
+	std::list<Brick*>::iterator it;
     
     SDL_Color textColor;
     SDL_Surface* startTextSurface;
