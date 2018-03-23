@@ -162,10 +162,10 @@ void Game::Draw()
     SDL_RenderClear(renderer);
     pad->Draw();
     ball->Draw();
-    for (int i = 0; i < NUM_OF_BRICKS; i++)
-    {
-        bricks[i]->Draw();
-    }
+	for (it = bricks.begin(); it != bricks.end(); ++it)
+	{
+		(*it)->Draw();
+	}
     SDL_RenderPresent(renderer);
 }
 
